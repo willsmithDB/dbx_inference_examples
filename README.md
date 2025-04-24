@@ -1,8 +1,16 @@
 # Distributed Model Inference Examples on Databricks with Huggingface and Accelerate
 
-This repository provides tools and scripts for performing distributed model inference on Databricks using Huggingface and Accelerate. The focus is on leveraging data parallelism and model parallelism to efficiently utilize resources.
+This repository provides tools and scripts for performing distributed model inference on Databricks using Huggingface and Accelerate. The focus is on leveraging data parallelism and model parallelism to efficiently utilize resources. 
 
 This is not official Databricks documentation nor official assets.
+## Models Used
+- Meta-Llama-3-8B-Instruct split across 2 V100 GPUs [32GB VRAM each] from [Huggingface](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+- Llama-3.3-70B-Instruct split across 2 A100 GPUs [80GB VRAM each] from [Huggingface](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct)
+- Meta-Llama-3-8B-Instruct loaded into 1 V100 with 8-bit quantization from [Huggingface](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)
+
+## Data Used
+- MedQuad dataset: keivalya/MedQuad-MedicalQnADataset from [Huggingface Datasets](https://huggingface.co/datasets/keivalya/MedQuad-MedicalQnADataset)
+
 
 ## Concepts
 
@@ -20,6 +28,8 @@ For more details, refer to the [Huggingface Accelerate Distributed Inference Gui
 ## Configuration
 
 Before running the scripts, ensure you update the `config.yaml` file with the appropriate settings for your environment.
+
+## Cluster Configurations
 
 ## Cluster Configurations
 
