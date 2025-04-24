@@ -12,6 +12,11 @@ Data parallelism involves splitting the input data across multiple devices, wher
 ### Model Parallelism
 Model parallelism involves splitting the model itself across multiple devices. This is useful for large models that cannot fit into the memory of a single device. By distributing the model, each device handles a portion of the model's layers or operations.
 
+You can alsp have pipeline parallelism where we can end in as many inputs as we have GPUs whereas each part of will be working on their particular chunk. This results in more efficient usage of the GPUs rather than idling for certain model chunks during generation. 
+
+![Model Parallelism](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/accelerate/pipeline_parallel.png)
+
+For more details, refer to the [Huggingface Accelerate Distributed Inference Guide](https://huggingface.co/docs/accelerate/main/en/usage_guides/distributed_inference).
 ## Configuration
 
 Before running the scripts, ensure you update the `config.yaml` file with the appropriate settings for your environment.
